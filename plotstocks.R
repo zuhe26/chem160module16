@@ -1,0 +1,5 @@
+stocks <- read.table("stocks.txt",header=F)
+days=1:length(stocks$V2)
+tiff("stockplot.tiff")
+plot(stocks$V2~days,xlab="Day",ylab="Stock price",main="Daily Google Stock Price (Jul 2014-Jul 2015)")
+null <- dev.off()
